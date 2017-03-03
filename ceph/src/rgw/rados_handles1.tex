@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shadows}
+\usepackage{pgf-umlsd}
+ 
+\begin{document}
+
+\begin{sequencediagram}
+  \tikzstyle{inststyle}+=[bottom color=yellow] % custom the style
+  \newthread[blue]{rm}{:rgwmain}
+  \newinst[2]{rsm}{:RGWStoreManager}
+  \newinst[2]{sense}{:SenseServer}
+  \newthread[red]{ctr}{:SimControlNode}
+  
+    \begin{call}{rm}{getstorage()}{rsm}
+    \end{call}
+
+\end{sequencediagram}
+
+\end{document}
